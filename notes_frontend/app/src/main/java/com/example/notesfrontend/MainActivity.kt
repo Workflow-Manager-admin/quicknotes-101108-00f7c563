@@ -12,15 +12,17 @@ import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.*
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.FloatingActionButton
-import androidx.compose.material3.icons.Icons
-import androidx.compose.material3.icons.filled.Add
-import androidx.compose.material3.icons.filled.Delete
-import androidx.compose.material3.icons.filled.Edit
-import androidx.compose.material3.icons.filled.ArrowBack
-import androidx.compose.material3.icons.filled.Save
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.material3.Surface
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Delete
+import androidx.compose.material.icons.filled.Edit
+import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Save
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -175,6 +177,7 @@ fun NotesApp() {
 /**
  * Modern main list screen for notes, with FAB for new note.
  */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun NotesListScreen(
     notes: List<Note>,
@@ -255,6 +258,7 @@ fun NoteCard(note: Note, onClick: () -> Unit) {
 /**
  * Detail screen for viewing a single note.
  */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun NoteDetailScreen(
     note: Note,
@@ -301,6 +305,7 @@ fun NoteDetailScreen(
 /**
  * Editor for creating/updating a note.
  */
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun NoteEditorScreen(
     initialNote: Note?,
